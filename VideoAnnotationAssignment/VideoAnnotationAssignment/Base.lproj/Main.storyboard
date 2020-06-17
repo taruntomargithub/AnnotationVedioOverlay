@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qAn-hb-xLR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed Page View Controller-->
+        <scene sceneID="efb-JM-deu">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="currentContext" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="FYF-ei-G6x" customClass="FeedPageViewController" customModule="VideoAnnotationAssignment" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home" id="QaT-nM-GKZ"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xV-Sx-rHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-1383"/>
+        </scene>
+        <!--Parent Tab View Controller-->
+        <scene sceneID="CzY-bC-ji6">
+            <objects>
+                <tabBarController id="qAn-hb-xLR" customClass="ParentTabViewController" customModule="VideoAnnotationAssignment" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="skP-zR-oMT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.20000000000000001" green="0.70980392160000005" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.20000000000000001" green="0.70980392160000005" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FYF-ei-G6x" kind="relationship" relationship="viewControllers" id="hdH-dY-F00"/>
+                        <segue destination="XEs-G9-RvL" kind="relationship" relationship="viewControllers" id="dzY-de-oqn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOH-rn-hgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="-717"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="SdR-B3-xhd">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="XEs-G9-RvL" customClass="SearchViewController" customModule="VideoAnnotationAssignment" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mhi-3l-tir">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pqs-iz-Ep5">
+                                <rect key="frame" x="18" y="64" width="378" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="o3s-oG-aWe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Owe-BD-eON" firstAttribute="trailing" secondItem="pqs-iz-Ep5" secondAttribute="trailing" constant="18" id="R1Q-O4-aJV"/>
+                            <constraint firstItem="pqs-iz-Ep5" firstAttribute="leading" secondItem="Owe-BD-eON" secondAttribute="leading" constant="18" id="lUM-hP-lDo"/>
+                            <constraint firstItem="pqs-iz-Ep5" firstAttribute="top" secondItem="Owe-BD-eON" secondAttribute="top" constant="20" id="vFH-je-lqj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Owe-BD-eON"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="search" id="fdA-wH-LN8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-fw-sfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-643"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="3cK-OZ-GxG">
+            <objects>
+                <avPlayerViewController storyboardIdentifier="FeedViewController" videoGravity="AVLayerVideoGravityResizeAspect" id="N9W-eg-OmQ" customClass="FeedViewController" customModule="VideoAnnotationAssignment" sceneMemberID="viewController">
+                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HAh-5F-qTs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wx-0J-3Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="-1383"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="128" height="128"/>
+        <image name="search" width="128" height="128"/>
+    </resources>
+</document>
